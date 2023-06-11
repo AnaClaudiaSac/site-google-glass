@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste JavaScript</title>
+    <title>Teste JavaScript03</title>
     <script>
-        function acendeLampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-acesa.jpg"
-        }
+        var quebrada = false
 
-        function apagaLampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-apagada.jpg"
-        }
+        function MudaLampada(tipo) {
+                if (!quebrada) {
+                document.getElementById("Luz").src = "_imagens/" + tipo + ".jpg"
+                if (tipo == 'lampada-quebrada') {
+                    quebrada = true
+                }
 
-        function quebraLampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-quebrada.jpg"
+            }
         }
-
 
     </script>
 </head>
@@ -26,7 +25,7 @@
 <body>
     <h1>Acenda a Lâmpada</h1>
 
-    <img src="_imagens/lampada-apagada.jpg" id="Luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" />
+    <img src="_imagens/lampada-apagada.jpg" id="Luz" onmousemove="MudaLampada('lampada-acesa')" onmouseout="MudaLampada('lampada-apagada')" onclick="MudaLampada('lampada-quebrada')" />
 
 </body>
 
