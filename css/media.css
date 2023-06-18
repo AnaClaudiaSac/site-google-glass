@@ -5,15 +5,9 @@ body div#tv-radio {
     height: 580px;
     margin: auto;
     background: url("../_imagens/radio-tv.png") no-repeat;
+    margin: 100px 50px 50px 50px;
+    padding: auto;
    }
-
-div#tv-radio {
-    width: 900px;
-    height: 580px;
-    margin: auto;
-    background: url("../_imagens/radio-tv.png");
-    background: no-repeat;
-}
 
 audio#musica {
     display: block;
