@@ -64,51 +64,82 @@
 
 
                 <form method="post" id="fContato" action="mailto:contato@cursosemvideo.com"></form>
-    
 
-                    <fieldset id="ususario">
-                        <legend>Identificação do Usuário</legend>
-                        <p><label for="cNome">Nome:</label>
-                        <input type="text" name="tname" id="cNome" size="20" maxlength="30"  placeholder="Nome Completo"></p>
-                         <p><label for="cSenha">Senha:</label>     
-                        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
-                        <p><label for="cMail">E-Mail:</label>
+
+                <fieldset id="ususario">
+                    <legend>Identificação do Usuário</legend>
+                    <p><label for="cNome">Nome:</label>
+                        <input type="text" name="tname" id="cNome" size="20" maxlength="30" placeholder="Nome Completo">
+                    </p>
+                    <p><label for="cSenha">Senha:</label>
+                        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos">
+                    </p>
+                    <p><label for="cMail">E-Mail:</label>
                         <input type="email" name="tMail" id="CMail" size="20" maxlength="40">
 
-                        <fieldset id="Sexo">
-                            <legend>Sexo</legend>
-                            <input type="radio" name="tSexo" id="cMasc" checked /> <label
-                                for="cMasc">Masculino</label><br>
-                            <input type="radio" name="tSexo" id="cFem" /> <label for="cFem">Feminino</label>
-                        </fieldset>
-                        <p><label for="cNasc">Data de Nascimento:</label>
-                        <input type="date" name="tNasc" id="cNasc"/></p>
+                    <fieldset id="Sexo">
+                        <legend>Sexo</legend>
+                        <input type="radio" name="tSexo" id="cMasc" checked /> <label for="cMasc">Masculino</label><br>
+                        <input type="radio" name="tSexo" id="cFem" /> <label for="cFem">Feminino</label>
                     </fieldset>
+                    <p><label for="cNasc">Data de Nascimento:</label>
+                        <input type="date" name="tNasc" id="cNasc" />
+                    </p>
+                </fieldset>
 
-                    <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                        <p><label for="cRua">Logradouro:</label>
-                        <input type="text" name="tRua" id="cRua" size="14" maxlength="80" placeholder="Rua, Av, Trav..." /></p>
-                        <p><label for="cNum">Número:</label>  
-                       <input type="number" name="tNum" id="cNum" min="0" max="9999" /></p>
-                        Estado:
-                        Cidade:
-                    </fieldset>
+                <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                    <p><label for="cRua">Logradouro:</label>
+                        <input type="text" name="tRua" id="cRua" size="14" maxlength="80"
+                            placeholder="Rua, Av, Trav..." />
+                    </p>
+                    <p><label for="cNum">Número:</label>
+                        <input type="number" name="tNum" id="cNum" min="0" max="9999" />
+                    </p>
+                    <p><label for="cEst">Estado:</label>
+                        <select name="tEst" id="cEst">
+                            <optgroup label="Região Sudeste">
+                                <option value="SP" select>São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                            </optgroup>
 
-                    <fieldset id="mensagem">
-                        <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
-                    </fieldset>
+                            <OPTgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                            </OPTgroup>
 
-                    <fieldset id="pedido">
-                        <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
-                    </fieldset>
+                        </select>
+                    </p>
 
-                    [BOTÃO ENVIAR]
+                    <p><label for="cCid">Cidade:</label>
+                        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades">
+                    </p>
+                    <datalist id="cidades">
+                        <option value="São Paulo"></option>
+                        <option value="Campinas"></option>
+                        <option value="Limeira"></option>
+                        <option value="Araras"></option>
+                    </datalist>
+                </fieldset>
+
+                <fieldset id="mensagem"><legend>Mensagen do Usuário:</legend>
+                    <p><label for="cUrg">Grau de Urgência:</label></p>
+                    Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>
+                    <p><label for="cMsg">Mensagem:</label>
+                    <textarea name="tMSG" id="cMsg" cols="40" rows="5" placeholder="Deixe aqui sua Mensagem"></textarea></p>
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                    Gostaria de adquirir um Google Glass quando disponível
+                    Cor:
+                    Quantidade:
+                    Preço Total: R$
+                </fieldset>
+
+                [BOTÃO ENVIAR]
                 </form>
 
                 <footer id="rodape">
